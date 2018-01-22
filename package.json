@@ -1,0 +1,12 @@
+{
+  "name": "nodew",
+  "version": "1.0.0",
+  "bin": "bin.js",
+  "author": "Michael Rhodes",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "~2.3.0",
+    "chokidar": "~2.0.0",
+    "respawn": "~2.5.0"
+  }
+}
