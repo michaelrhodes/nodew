@@ -17,7 +17,7 @@ m.on('stdout', onstdout)
 m.on('stderr', onstderr)
 m.start()
 
-var w = chokidar.watch(process.cwd(), { ignored: /\.swp$/ })
+var w = chokidar.watch(process.cwd(), { ignored: /(\.git\/|\.swp$)/ })
 w.on('change', restart)
 w.on('unlink', restart)
 
