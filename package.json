@@ -1,12 +1,12 @@
 {
   "name": "nodew",
+  "author": "Michael Rhodes",
   "version": "1.0.0",
   "bin": "bin.js",
-  "author": "Michael Rhodes",
   "license": "MIT",
   "dependencies": {
-    "chalk": "~2.3.0",
-    "chokidar": "~2.0.0",
-    "respawn": "~2.5.0"
+    "chalk": "~2.4.1",
+    "chokidar": "~2.0.4",
+    "respawn": "github:michaelrhodes/respawn#v2.5.1"
   }
 }

@@ -15,6 +15,8 @@ var m = spawn(cmd)
 m.on('spawn', onspawn)
 m.on('stdout', onstdout)
 m.on('stderr', onstderr)
+m.on('warn', onstderr)
+m.on('crash', onstderr)
 m.start()
 
 var w = chokidar.watch(process.cwd(), { ignored: /(\.git\/|\.swp$)/ })
@@ -52,7 +54,7 @@ function prefix (pid) {
 
 function spawn (cmd) {
   var args = [BIN_SH, '-c', cmd]
-  var opts = { env: process.env, maxRestarts: Infinity }
+  var opts = { env: process.env, maxRestarts: -1 }
   if (process.platform === 'win32') {
     args = [CMD_EXE, '/d', '/s', '/c', '"' + cmd + '"']
     opts.windowsVerbatimArguments = true
