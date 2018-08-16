@@ -19,7 +19,7 @@ m.on('warn', onstderr)
 m.on('crash', onstderr)
 m.start()
 
-var w = chokidar.watch(process.cwd(), { ignored: /(\.git\/|\.swp$)/ })
+var w = chokidar.watch(process.cwd(), { ignored: /(node_modules|\.git\/|\.swp$)/ })
 w.on('change', restart)
 w.on('unlink', restart)
 
