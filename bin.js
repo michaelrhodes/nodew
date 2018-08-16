@@ -45,7 +45,7 @@ function log (message, color) {
 
   var i = 0, l = ln.length
   for (; i < l; i++) ln[i] = prefix(m.pid) + ln[i]
-  console.log(chalk[color](ln.join('\n')))
+  console[color === 'red' ? 'error' : 'log'](chalk[color](ln.join('\n')))
 }
 
 function prefix (pid) {
